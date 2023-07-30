@@ -42,7 +42,7 @@ struct ContentView: View {
                                 .font(.system(size: 32))
                                 .frame(width: self.buttonWidth(), height: self.buttonWidth())
                                 .background(Color.orange)
-                                .cornerRadius(50)
+                                .cornerRadius(self.buttonWidth())
                         }
                     }
                 }
@@ -53,7 +53,7 @@ struct ContentView: View {
     }
     
     func buttonWidth() -> CGFloat {
-        return (UIScreen.main.bounds.width) / 4
+        return (UIScreen.main.bounds.width - (5 * 12)) / 4
     }
 }
 

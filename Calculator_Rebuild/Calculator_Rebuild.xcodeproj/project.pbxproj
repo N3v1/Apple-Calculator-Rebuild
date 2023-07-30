@@ -51,7 +51,7 @@
 		38A1B6652A76C95B00E978AB /* Calculator_Rebuild */ = {
 			isa = PBXGroup;
 			children = (
-				38A1B6662A76C95B00E978AB /* Calculator_RebuildApp.swift */,
+				38A1B6742A76FCEF00E978AB /* App */,
 				38A1B6682A76C95B00E978AB /* ContentView.swift */,
 				38A1B66A2A76C95C00E978AB /* Assets.xcassets */,
 				38A1B66C2A76C95C00E978AB /* Preview Content */,
@@ -65,6 +65,14 @@
 				38A1B66D2A76C95C00E978AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38A1B6742A76FCEF00E978AB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38A1B6662A76C95B00E978AB /* Calculator_RebuildApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
