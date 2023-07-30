@@ -124,6 +124,9 @@ struct ContentView: View {
                         case .none: break
                     }
                 }
+            if button != .equal {
+                self.value = "0"
+            }
             case .clear:
                 self.value = "0"
             case .decimal, .negative, .percent:
