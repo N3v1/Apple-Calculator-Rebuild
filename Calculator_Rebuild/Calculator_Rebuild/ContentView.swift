@@ -24,7 +24,13 @@ struct ContentView: View {
                 .padding()
                 
                 // MARK: BUTTONS
-        
+                HStack {
+                    ForEach(["7", "8", "9", "x"], id: \.self) { button in
+                        Text(button)
+                            .foregroundColor(.white)
+                    }
+                }
+                
             }
         }
     }
