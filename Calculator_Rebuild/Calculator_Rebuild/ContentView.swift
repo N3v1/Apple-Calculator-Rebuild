@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum CalcButton {
+    case one, two, three, four, five, six, seven, eight, nine, zero
+    case equal, plus, minus, multiply, division
+    case clear, plusMinus, percent, decimal
+}
+
 struct ContentView: View {
     
     let buttons = [
