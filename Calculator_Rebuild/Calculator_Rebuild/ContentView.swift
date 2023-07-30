@@ -7,6 +7,28 @@
 
 import SwiftUI
 
+enum CalcButton {
+    case one
+    case two
+    case three
+    case four
+    case five
+    case six
+    case seven
+    case eight
+    case nine
+    case zero
+    case plus
+    case minus
+    case multiply
+    case division
+    case equal
+    case clear
+    case decimal
+    case percent
+    case negativeP
+}
+
 struct ContentView: View {
     var body: some View {
         ZStack {
@@ -25,6 +47,7 @@ struct ContentView: View {
                 .padding()
                 
                 //MARK: BUTTONS
+                
                 
             }
         }
