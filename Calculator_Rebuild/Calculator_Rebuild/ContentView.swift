@@ -9,8 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, World!")
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                // MARK: RESULT AREA
+                HStack {
+                    Spacer()
+                    Text("0")
+                        .bold()
+                        .font(.system(size: 80))
+                        .foregroundColor(.white)
+                }
+                .padding()
+                
+                // MARK: BUTTONS
+        
+            }
         }
     }
 }
