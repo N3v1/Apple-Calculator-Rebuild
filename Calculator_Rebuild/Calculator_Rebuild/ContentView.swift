@@ -14,7 +14,15 @@ struct ContentView: View {
             
             VStack {
                 //MARK: RESULT AREA
-                Text("Hello, world!")
+                HStack {
+                    Spacer()
+                    
+                    Text("0")
+                        .bold()
+                        .font(.system(size: 64))
+                    .foregroundColor(.white)
+                }
+                .padding()
                 
                 //MARK: BUTTONS
                 
