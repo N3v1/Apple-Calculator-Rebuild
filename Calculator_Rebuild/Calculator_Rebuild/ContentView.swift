@@ -32,17 +32,17 @@ enum CalcButton: String {
         switch self {
             case .plus, .minus, .multiply, .division, .equal:
                 return .orange
-//            case .zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .decimal:
-//                return .gray
             case .clear, .negative, .percent:
                 return Color(.lightGray)
             default:
-            return Color(UIColor(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1))
+                return Color(UIColor(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1))
         }
     }
 }
 
 struct ContentView: View {
+    
+    @State var value = "0"
     
     let buttons: [[CalcButton]] = [
         [.clear, .negative, .percent, .division],
@@ -62,10 +62,10 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     
-                    Text("0")
+                    Text(value)
                         .bold()
-                        .font(.system(size: 64))
-                    .foregroundColor(.white)
+                        .font(.system(size: 72))
+                        .foregroundColor(.white)
                 }
                 .padding()
                 
@@ -90,6 +90,10 @@ struct ContentView: View {
                 }
             }
         }
+    }
+    
+    func didTap(button: CalcButton) {
+        
     }
     
     func buttonWidth(item: CalcButton) -> CGFloat {
