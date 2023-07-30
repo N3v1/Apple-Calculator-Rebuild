@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let buttons = [
+        ["AC", "+/-", "%", "/"],
+        ["7", "8", "9", "x"],
+        ["4", "5", "6", "-"],
+        ["1", "2", "3", "+"],
+        ["0", ".", "="]
+    ]
+    
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
@@ -24,10 +33,14 @@ struct ContentView: View {
                 .padding()
                 
                 // MARK: BUTTONS
-                HStack {
-                    ForEach(["7", "8", "9", "x"], id: \.self) { button in
-                        Text(button)
-                            .foregroundColor(.white)
+                ForEach(buttons, id: \.self) { row in
+                    HStack {
+                        ForEach(row, id: \.self) { items in
+                            Text(items)
+                                .foregroundColor(.white)
+                                .font(.system(size: 32))
+                                .frame(width: 80, height: 80)
+                        }
                     }
                 }
                 
