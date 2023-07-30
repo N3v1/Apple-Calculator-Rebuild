@@ -18,11 +18,12 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
             
-            VStack {
+            VStack(spacing: 12) {
                 // MARK: RESULT AREA
+                //Spacer()
                 HStack {
                     Spacer()
                     Text("0")
@@ -34,18 +35,25 @@ struct ContentView: View {
                 
                 // MARK: BUTTONS
                 ForEach(buttons, id: \.self) { row in
-                    HStack {
+                    HStack(spacing: 12) {
                         ForEach(row, id: \.self) { items in
                             Text(items)
                                 .foregroundColor(.white)
                                 .font(.system(size: 32))
-                                .frame(width: 80, height: 80)
+                                .frame(width: self.buttonWidth(), height: self.buttonWidth())
+                                .background(Color.orange)
+                                .cornerRadius(50)
                         }
                     }
                 }
                 
             }
+            .padding(.bottom)
         }
+    }
+    
+    func buttonWidth() -> CGFloat {
+        return (UIScreen.main.bounds.width) / 4
     }
 }
 
