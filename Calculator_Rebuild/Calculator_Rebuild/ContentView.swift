@@ -41,7 +41,7 @@ enum CalcButton: String {
 }
 
 enum Operation {
-    case add, subtract, multiply, divide, equal, none
+    case add, subtract, multiply, divide, none
 }
 
 struct ContentView: View {
@@ -117,10 +117,11 @@ struct ContentView: View {
                     let runningValue = self.runningNumber
                     let currentValue = Int(self.value) ?? 0
                     switch self.currentOperation {
-                    case .add: self.value = "\(runningValue + currentValue)"
-                        case .subtract:
-                        case .multiply:
-                        case .divide:
+                        case .add: self.value = "\(runningValue + currentValue)"
+                        case .subtract: self.value = "\(runningValue - currentValue)"
+                        case .multiply: self.value = "\(runningValue * currentValue)"
+                        case .divide: self.value = "\(runningValue / currentValue)"
+                        case .none: break
                     }
                 }
             case .clear:
