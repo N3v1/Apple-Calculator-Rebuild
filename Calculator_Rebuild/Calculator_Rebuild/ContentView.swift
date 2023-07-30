@@ -26,7 +26,7 @@ enum CalcButton {
     case clear
     case decimal
     case percent
-    case negativeP
+    case negative
 }
 
 struct ContentView: View {
