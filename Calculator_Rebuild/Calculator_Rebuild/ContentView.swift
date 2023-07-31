@@ -75,11 +75,11 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
             
             VStack {
-                Spacer()
+//                Spacer()
                 // MARK: RESULT AREA
                 HStack {
                     Spacer()
