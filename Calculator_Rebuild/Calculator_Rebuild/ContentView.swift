@@ -8,25 +8,33 @@
 import SwiftUI
 
 enum CalcButton: String {
-    case one = "1"
-    case two = "2"
-    case three = "3"
-    case four = "4"
-    case five = "5"
-    case six = "6"
-    case seven = "7"
-    case eight = "8"
-    case nine = "9"
-    case zero = "0"
-    case plus = "+"
-    case minus = "-"
-    case multiply = "x"
-    case division = "/"
-    case equal = "="
-    case clear = "AC"
-    case decimal = "."
-    case percent = "%"
-    case negative = "+/-"
+    case one, two, three, four, five, six, seven, eight, nine, zero
+        case equal, plus, minus, multiply, division
+        case clear, negative, percent, decimal
+    
+    var title: String {
+        switch self {
+        case .one: return "1"
+        case .two: return "2"
+        case .three: return "3"
+        case .four: return "4"
+        case .five: return "5"
+        case .six: return "6"
+        case .seven: return "7"
+        case .eight: return "8"
+        case .nine: return "9"
+        case .zero: return "0"
+        case .equal: return "="
+        case .plus: return "+"
+        case .minus: return "-"
+        case .multiply: return "x"
+        case .division: return "/"
+        case .clear: return "AC"
+        case .negative: return "+/-"
+        case .percent: return "%"
+        case .decimal: return "."
+        }
+    }
     
     var buttonColor: Color {
         switch self {
@@ -36,6 +44,14 @@ enum CalcButton: String {
                 return Color(.lightGray)
             default:
                 return Color(UIColor(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1))
+        }
+    }
+    
+    var fontColor: Color {
+        switch self {
+        case .zero, .one, .two, .three ,.four, .five, .six, .seven, .eight, .nine, .equal, .plus, .minus, .multiply, .division, .decimal: return Color(.white)
+                    
+        case .clear, .negative, .percent: return Color(.black)
         }
     }
 }
@@ -59,11 +75,11 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             Color.black.edgesIgnoringSafeArea(.all)
             
             VStack {
-                Spacer()
+//                Spacer()
                 // MARK: RESULT AREA
                 HStack {
                     Spacer()
@@ -82,11 +98,11 @@ struct ContentView: View {
                             Button {
                                 self.didTap(button: item)
                             } label: {
-                                Text(item.rawValue)
+                                Text(item.title) // item.rawValue
                                     .font(.system(size: 32))
                                     .frame(width: self.buttonWidth(item: item), height: self.buttonHeight())
                                     .background(item.buttonColor)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(item.fontColor)
                                     .cornerRadius(self.buttonWidth(item: item) / 2)
                             }
 
@@ -132,7 +148,7 @@ struct ContentView: View {
             case .decimal, .negative, .percent:
                 break
             default:
-                let number = button.rawValue
+                let number = button.title // button.rawValue
                 if self.value == "0" {
                     value = number
                 } else {
