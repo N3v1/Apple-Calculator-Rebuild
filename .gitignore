@@ -1,9 +1,9 @@
 # ignoring specific file
-Calculator_Rebuild.xcodeproj
+#Calculator_Rebuild.xcodeproj
 .DS_Store
 *.DS_Store
 *.xcuserstate
-*.xcodeproj
+#*.xcodeproj
 *.pbxproj
 *.xcworkspace
 *.xcscheme
