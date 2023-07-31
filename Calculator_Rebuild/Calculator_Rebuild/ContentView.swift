@@ -86,12 +86,16 @@ struct ContentView: View {
                 ForEach(buttons, id: \.self) { row in
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { button in
-                            Text(button.title)
-                                .foregroundColor(button.fontColor) // .white
-                                .font(.system(size: 32))
-                                .frame(width: self.buttonWidth(), height: self.buttonWidth())
-                                .background(button.background)
-                                .cornerRadius(self.buttonWidth())
+                            Button {
+                                
+                            } label: {
+                                Text(button.title)
+                                    .foregroundColor(button.fontColor) // .white
+                                    .font(.system(size: 32))
+                                    .frame(width: self.buttonWidth(), height: self.buttonWidth())
+                                    .background(button.background)
+                                    .cornerRadius(self.buttonWidth())
+                            }
                         }
                     }
                 }
