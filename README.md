@@ -1,8 +1,8 @@
 # Apple-Calculator-Rebuild
+<!--<img align="right"  width="100" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"></a>-->
 This project is a recreation of the popular Apple calculator made using SwiftUI as the programming language. The calculator has been designed to closely mimic the functionality and design of the original while also featuring a self-mimicked designed app icon.
 
-<!--![UI](Images/Calculator.png)-->
-<img src="Calculator.png" width="300"/>
+<img align="right" width="400" src="Calculator.png"></a>
 ## Features
 **Basic Mathematical Operations:** The calculator supports four basic arithmetic operations: addition, subtraction, multiplication, and division.
 
