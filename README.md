@@ -28,7 +28,7 @@ The calculator app has been developed using SwiftUI, a modern and declarative ap
 Link to the SwiftUI Documentation **[here](https://developer.apple.com/xcode/swiftui/)**.
 
 ### Contributing
-If you would like to contribute to this project, we welcome pull requests. Please ensure that your changes are well-documented and maintain clean, readable code. 
+If you would like to contribute to this project, I welcome pull requests. Please ensure that your changes are well-documented and maintain clean, readable code. 
 
 ### License
 This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for more information.
