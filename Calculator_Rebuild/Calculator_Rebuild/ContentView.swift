@@ -84,7 +84,6 @@ struct ContentView: View {
             
             VStack(spacing: 12) {
                 // MARK: RESULT AREA
-                //Spacer()
                 HStack {
                     Spacer()
                     Text(env.display)
@@ -99,16 +98,6 @@ struct ContentView: View {
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { button in
                             CalcButtonView(button: button)
-//                            Button {
-//                                self.env.reciveInput(calculatorButton: button)
-//                            } label: {
-//                                Text(button.title)
-//                                    .foregroundColor(button.fontColor) // .white
-//                                    .font(.system(size: 32))
-//                                    .frame(width: self.buttonWidth(button: button), height: (UIScreen.main.bounds.width - (5 * 12)) / 4)
-//                                    .background(button.background)
-//                                    .cornerRadius(self.buttonWidth(button: button))
-//                            }
                         }
                     }
                 }
@@ -117,13 +106,6 @@ struct ContentView: View {
             .padding(.bottom)
         }
     }
-    
-//    func buttonWidth(button: CalcButton) -> CGFloat {
-//        if button == .zero {
-//            return ((UIScreen.main.bounds.width - (4 * 12)) / 4) * 2
-//        }
-//        return (UIScreen.main.bounds.width - (5 * 12)) / 4
-//    }
 }
 
 struct CalcButtonView: View {
