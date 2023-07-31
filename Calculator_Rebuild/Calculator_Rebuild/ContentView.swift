@@ -56,7 +56,17 @@ enum CalcButton: String {
     }
 }
 
+// MARK: ENVIRONMENT OBJ
+class GlobalEnv: ObservableObject {
+    
+    @Published var display = ""
+    
+}
+
 struct ContentView: View {
+    
+    @EnvironmentObject var env: GlobalEnv
+//    @State var value = "0"
     
     let buttons: [[CalcButton]] = [
         [.clear, .plusMinus, .percent, .division],
@@ -75,7 +85,7 @@ struct ContentView: View {
                 //Spacer()
                 HStack {
                     Spacer()
-                    Text("0")
+                    Text(env.display)
                         .bold()
                         .font(.system(size: 80))
                         .foregroundColor(.white)
@@ -115,6 +125,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(GlobalEnv())
     }
 }
