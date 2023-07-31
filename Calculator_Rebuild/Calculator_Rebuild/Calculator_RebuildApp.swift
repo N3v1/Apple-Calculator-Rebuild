@@ -2,7 +2,7 @@
 //  Calculator_RebuildApp.swift
 //  Calculator_Rebuild
 //
-//  Created by Nevio Hirani on 30.07.23.
+//  Created by NH on 30.07.23.
 //
 
 import SwiftUI
