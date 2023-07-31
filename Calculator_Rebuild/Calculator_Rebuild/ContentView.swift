@@ -38,6 +38,14 @@ enum CalcButton: String {
                 return Color(UIColor(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1))
         }
     }
+    
+    var fontColor: Color {
+        switch self {
+        case .zero, .one, .two, .three ,.four, .five, .six, .seven, .eight, .nine, .equal, .plus, .minus, .multiply, .division, .decimal: return Color(.white)
+                    
+        case .clear, .negative, .percent: return Color(.black)
+        }
+    }
 }
 
 enum Operation {
@@ -86,7 +94,7 @@ struct ContentView: View {
                                     .font(.system(size: 32))
                                     .frame(width: self.buttonWidth(item: item), height: self.buttonHeight())
                                     .background(item.buttonColor)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(item.fontColor)
                                     .cornerRadius(self.buttonWidth(item: item) / 2)
                             }
 
