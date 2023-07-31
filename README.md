@@ -17,7 +17,7 @@ To use the calculator on your iOS device, first clone the repository:
 ```bash
 git clone https://github.com/N3v1/Apple-Calculator-Rebuild.git
 ```
-Then, open the Xcode project file Calculator.xcodeproj and run the app on your simulator or connected device.
+Then, open the Xcode project file Calculator_Rebuild.xcodeproj and run the app on your simulator or connected device.
 
 ## Customizing the App Icon
 The app icon has been carefully designed to offer a unique and appealing user interface. If you wish to customize the app icon to suit your preferences, simply replace the `CalculatorProj.png` file in the project folder with your own icon, sized at 1024x1024 pixels.
