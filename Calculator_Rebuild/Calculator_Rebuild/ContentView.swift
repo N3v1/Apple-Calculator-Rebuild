@@ -12,6 +12,38 @@ enum CalcButton: String {
     case equal, plus, minus, multiply, division
     case clear, plusMinus, percent, decimal
     
+    var title: String {
+        switch self {
+        case .one: return "1"
+        case .two: return "2"
+        case .three: return "3"
+        case .four: return "4"
+        case .five: return "5"
+        case .six: return "6"
+        case .seven: return "7"
+        case .eight: return "8"
+        case .nine: return "9"
+        case .zero: return "0"
+        case .equal: return "="
+        case .plus: return "+"
+        case .minus: return "-"
+        case .multiply: return "x"
+        case .division: return "/"
+        case .clear: return "AC"
+        case .plusMinus: return "+/-"
+        case .percent: return "%"
+        case .decimal: return "."
+        }
+    }
+    
+    var fontColor: Color {
+        switch self {
+        case .zero, .one, .two, .three ,.four, .five, .six, .seven, .eight, .nine, .equal, .plus, .minus, .multiply, .division, .decimal: return Color(.white)
+                
+        case .clear, .plusMinus, .percent: return Color(.black)
+        }
+    }
+    
     var background: Color {
         switch self {
         case .one, .two, .three, .four, .five, .six, .seven, .eight,. nine, .zero, .decimal:
@@ -54,8 +86,8 @@ struct ContentView: View {
                 ForEach(buttons, id: \.self) { row in
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { button in
-                            Text(button.rawValue)
-                                .foregroundColor(.white)
+                            Text(button.title)
+                                .foregroundColor(button.fontColor) // .white
                                 .font(.system(size: 32))
                                 .frame(width: self.buttonWidth(), height: self.buttonWidth())
                                 .background(button.background)
