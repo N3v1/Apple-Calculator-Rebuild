@@ -1,25 +1,3 @@
 # ignoring specific file
-#Calculator_Rebuild.xcodeproj 
 .DS_Store
 *.DS_Store
-*.xcuserstate
-#*.xcodeproj
-*.pbxproj
-*.xcworkspace
-*.xcscheme
-xcuserdata
-neviohirani.xcuserdatad
-xcschemes
-*.plist
-xcschememanagement.plist
-Calculator_Rebuild.xcscheme
-contents.xcworkspacedata
-*.xcworkspacedata
-xcshareddata
-IDEWorkspaceChecks.plist
-swiftpm
-xcuserdata
-neviohirani.xcuserdatad
-*.xcuserdatad
-UserInterfaceState.xcuserstate
-*.xcuserstate
